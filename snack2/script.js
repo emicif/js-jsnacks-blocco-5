@@ -65,17 +65,19 @@ const zucchinePiùQuindici = [
 ]
 
 
-
-// Infine stampa separatamente quanto pesano i due gruppi di zucchine.
-
 let somma = 0;
-    for (let i = 0; i < zucchineMenoQuindici.length; i ++) {
-        const totaleZucchine = zucchineMenoQuindici[i];
+stampaPeso (zucchinePiùQuindici)
+console.log('Il totale del peso delle zucchine INFERIORI a 15cm è', somma, 'gr');
+stampaPeso (zucchinePiùQuindici)
+    console.log('Il totale del peso delle zucchine SUPERIORI a 15cm è', somma, 'gr');
+ 
+// Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+function stampaPeso (zucchine){
+    
+    for (let i = 0; i < zucchine.length; i ++) {
+        const totaleZucchine = zucchine[i];
         somma += totaleZucchine.peso;
     }
-    console.log('Il totale del peso delle zucchine INFERIORI a 15cm è', somma, 'cm');
-    for (let i = 0; i < zucchinePiùQuindici.length; i ++) {
-        const totaleZucchine = zucchinePiùQuindici[i];
-        somma += totaleZucchine.peso;
-    }
-    console.log('Il totale del peso delle zucchine SUPERIORI a 15cm è', somma, 'cm');
+ return somma;
+    
+}
